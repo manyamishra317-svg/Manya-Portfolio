@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f5;
+    color: #171717;
+    line-height: 1.6;
+}
+
+
+/* Navigation */
+
+nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #171717;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    opacity: 0.5;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 8%;
+}
+
+.hero-text {
+    max-width: 900px;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(50px, 7vw, 100px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+    margin-bottom: 35px;
+}
+
+h1 span {
+    color: #777;
+}
+
+.intro {
+    max-width: 600px;
+    font-size: 19px;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.button {
+    padding: 13px 25px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.primary {
+    background: #171717;
+    color: white;
+}
+
+.secondary {
+    border: 1px solid #171717;
+    color: #171717;
+}
+
+
+/* Sections */
+
+section {
+    padding: 100px 8%;
+}
+
+section h2 {
+    font-size: clamp(35px, 5vw, 65px);
+    letter-spacing: -2px;
+    margin-bottom: 60px;
+}
+
+
+/* About */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    max-width: 1000px;
+}
+
+.about-grid p {
+    font-size: 20px;
+    color: #555;
+}
+
+
+/* Projects */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    border-top: 1px solid #222;
+    padding-top: 25px;
+}
+
+.project span,
+.writing-list small {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #777;
+}
+
+.project h3 {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.project p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.project a {
+    color: #171717;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Timeline */
+
+.timeline {
+    max-width: 900px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+
+    border-top: 1px solid #ccc;
+
+    padding: 30px 0;
+}
+
+.date {
+    color: #777;
+}
+
+.timeline-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+/* Writing */
+
+.writing-list {
+    max-width: 1000px;
+}
+
+.writing-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 0;
+
+    border-top: 1px solid #ccc;
+
+    text-decoration: none;
+    color: #171717;
+}
+
+.writing-list h3 {
+    font-size: 25px;
+    margin-top: 8px;
+}
+
+
+/* Skills */
+
+.skills {
+    background: #171717;
+    color: white;
+}
+
+.skills .section-label {
+    color: #aaa;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-container span {
+    border: 1px solid #555;
+    padding: 10px 18px;
+    font-size: 14px;
+}
+
+
+/* Contact */
+
+.contact {
+    min-height: 70vh;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact > p {
+    max-width: 600px;
+    color: #666;
+    font-size: 18px;
+}
+
+.contact-links {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-links a {
+    color: #171717;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 30px 8%;
+    border-top: 1px solid #ddd;
+
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 70px;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+}
