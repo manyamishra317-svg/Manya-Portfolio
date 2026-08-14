@@ -10,6 +10,11 @@
     --light: #eeece7;
 }
 
+
+/* =========================
+   GLOBAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +35,11 @@ body {
 a {
     color: inherit;
 }
+
+
+/* =========================
+   NAVIGATION
+========================= */
 
 .navbar {
     height: 82px;
@@ -68,7 +78,9 @@ a {
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 88vh;
@@ -119,6 +131,11 @@ a {
     margin-top: 35px;
 }
 
+
+/* =========================
+   BUTTONS
+========================= */
+
 .button {
     padding: 13px 24px;
     text-decoration: none;
@@ -146,6 +163,11 @@ a {
     color: white;
 }
 
+
+/* =========================
+   HERO SIDE
+========================= */
+
 .hero-side {
     border-left: 1px solid var(--border);
     padding-left: 30px;
@@ -166,7 +188,9 @@ a {
 }
 
 
-/* SECTIONS */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 .section {
     padding: 110px 7%;
@@ -197,7 +221,9 @@ a {
 }
 
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about-content {
     display: grid;
@@ -218,44 +244,85 @@ a {
 }
 
 
-/* RESEARCH */
+/* =========================
+   SELECTED RESEARCH
+========================= */
 
-.research-grid {
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-.research-card {
+.project-card {
     border-top: 2px solid var(--navy);
-    padding: 25px 0;
+    padding: 25px 0 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 390px;
 }
 
-.card-number {
+.project-number {
     font-family: "Libre Baskerville", serif;
     color: var(--grey);
     font-size: 14px;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
-.card-category {
+.project-type {
     color: var(--grey);
     font-size: 10px;
     letter-spacing: 1.5px;
+    text-transform: uppercase;
     margin-bottom: 15px;
 }
 
-.research-card h3 {
+.project-card h3 {
     font-family: "Libre Baskerville", serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.35;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
-.research-card p:last-child {
+.project-card > p:not(.project-type) {
     color: var(--grey);
     font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    margin-bottom: 22px;
+}
+
+.project-tags span {
+    border: 1px solid var(--border);
+    padding: 5px 9px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+.project-link {
+    width: fit-content;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--navy);
+    padding-bottom: 3px;
+    transition: 0.2s;
+}
+
+.project-link:hover {
+    color: var(--grey);
+    border-color: var(--grey);
 }
 
 .research-note {
@@ -267,7 +334,9 @@ a {
 }
 
 
-/* EXPERIENCE */
+/* =========================
+   EXPERIENCE
+========================= */
 
 .experience-item {
     display: grid;
@@ -311,7 +380,9 @@ a {
 }
 
 
-/* EDUCATION */
+/* =========================
+   EDUCATION
+========================= */
 
 .education-list {
     max-width: 1100px;
@@ -344,7 +415,9 @@ a {
 }
 
 
-/* INTERESTS */
+/* =========================
+   INTERESTS
+========================= */
 
 .interest-grid {
     display: grid;
@@ -360,7 +433,9 @@ a {
 }
 
 
-/* STATEMENT */
+/* =========================
+   STATEMENT
+========================= */
 
 .statement-section {
     background: var(--navy);
@@ -381,7 +456,9 @@ a {
 }
 
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-section {
     min-height: 70vh;
@@ -416,7 +493,9 @@ a {
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: var(--navy-dark);
@@ -438,9 +517,177 @@ footer span {
 }
 
 
-/* MOBILE */
+/* ==================================================
+   INDIVIDUAL RESEARCH PROJECT PAGES
+================================================== */
+
+.research-page {
+    background: var(--cream);
+}
+
+
+/* Research page hero */
+
+.research-hero {
+    padding: 120px 7% 90px;
+    border-bottom: 1px solid var(--border);
+    max-width: 1250px;
+}
+
+.research-hero h1 {
+    max-width: 1000px;
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(42px, 6vw, 78px);
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+
+.research-hero h1 span {
+    color: var(--navy);
+}
+
+.research-subtitle {
+    max-width: 700px;
+    margin-top: 30px;
+    color: var(--grey);
+    font-size: 18px;
+}
+
+
+/* Research metadata */
+
+.research-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+.research-meta div {
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+}
+
+.research-meta small {
+    display: block;
+    color: var(--grey);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.research-meta strong {
+    font-family: "Libre Baskerville", serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+/* Research content */
+
+.research-content {
+    display: grid;
+    grid-template-columns: minmax(0, 760px) 260px;
+    gap: 100px;
+    padding: 90px 7% 120px;
+    max-width: 1250px;
+}
+
+.research-main h2 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin: 60px 0 25px;
+}
+
+.research-main h2:first-child {
+    margin-top: 0;
+}
+
+.research-main p {
+    color: var(--grey);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.research-main ul {
+    padding-left: 22px;
+    color: var(--grey);
+}
+
+.research-main li {
+    margin-bottom: 12px;
+}
+
+
+/* Findings */
+
+.finding-box {
+    border-top: 1px solid var(--border);
+    padding: 25px 0;
+}
+
+.finding-box h3 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.finding-box p {
+    margin-bottom: 0;
+}
+
+
+/* Research sidebar */
+
+.research-sidebar {
+    border-left: 1px solid var(--border);
+    padding-left: 30px;
+    height: fit-content;
+    position: sticky;
+    top: 120px;
+}
+
+.sidebar-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--grey);
+    margin-bottom: 20px;
+}
+
+.research-sidebar > span {
+    display: block;
+    font-family: "Libre Baskerville", serif;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+
+/* Research page buttons */
+
+.research-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.research-actions .button {
+    text-align: center;
+}
+
+
+/* ==================================================
+   MOBILE / TABLET
+================================================== */
 
 @media (max-width: 800px) {
+
+
+    /* Navigation */
 
     .navbar {
         padding: 0 6%;
@@ -449,6 +696,9 @@ footer span {
     .nav-links {
         display: none;
     }
+
+
+    /* Homepage hero */
 
     .hero {
         grid-template-columns: 1fr;
@@ -467,19 +717,35 @@ footer span {
         padding-top: 25px;
     }
 
+
+    /* General sections */
+
     .section {
         padding: 80px 6%;
     }
+
+
+    /* About */
 
     .about-content {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
-    .research-grid {
+
+    /* Research cards */
+
+    .projects-grid {
         grid-template-columns: 1fr;
         gap: 50px;
     }
+
+    .project-card {
+        min-height: auto;
+    }
+
+
+    /* Experience & education */
 
     .experience-item,
     .education-item {
@@ -487,13 +753,52 @@ footer span {
         gap: 15px;
     }
 
+
+    /* Interests */
+
     .interest-grid {
         grid-template-columns: 1fr;
     }
+
+
+    /* Research project page */
+
+    .research-hero {
+        padding: 80px 6% 60px;
+    }
+
+    .research-hero h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .research-content {
+        grid-template-columns: 1fr;
+        padding: 60px 6% 80px;
+        gap: 60px;
+    }
+
+    .research-meta {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .research-sidebar {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 30px;
+        position: static;
+    }
+
+
+    /* Footer */
 
     footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
     }
+
 }
